@@ -359,7 +359,7 @@
 
 /* Typewriter Subtitle */
 .subtitle-container {
-    width: 100%;
+    width: max-content;
     margin-top: -1.5rem;
     margin-bottom: 0.5rem;
 }
