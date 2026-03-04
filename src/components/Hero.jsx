@@ -20,8 +20,14 @@ const Hero = () => {
 
     return (
         <div className="hero-container">
-            {/* Brightness Darkening Overlay */}
-            <div className="brightness-overlay" style={{ opacity: 1 - brightness / 100 }}></div>
+            {/* Brightness Darkening/Brightening Overlay */}
+            <div
+                className="brightness-overlay"
+                style={{
+                    backdropFilter: `brightness(${brightness}%)`,
+                    WebkitBackdropFilter: `brightness(${brightness}%)`
+                }}
+            ></div>
 
             {/* Page Transition Overlay */}
             <div className={`page-transition-overlay ${isTransitioning ? 'active' : ''}`}>
@@ -77,8 +83,8 @@ const Hero = () => {
                 <Sun className="brightness-icon" size={20} />
                 <input
                     type="range"
-                    min="20"
-                    max="100"
+                    min="30"
+                    max="250"
                     value={brightness}
                     onChange={(e) => setBrightness(e.target.value)}
                     className="brightness-slider"
