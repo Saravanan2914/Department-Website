@@ -92,7 +92,7 @@ const Hero = () => {
                         <span className="btn-text">Alumini</span>
                         <span className="btn-hover-line"></span>
                     </button>
-                    <button className="nav-btn group">
+                    <button className="nav-btn group" onClick={() => navigate('/gallery')}>
                         <span className="btn-text">Gallery</span>
                         <span className="btn-hover-line"></span>
                     </button>
