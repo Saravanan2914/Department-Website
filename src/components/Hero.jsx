@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Shield, Users, GraduationCap, Code, Cpu, Database, Network, Terminal, Server, Wifi, Sun } from 'lucide-react';
+import { Shield, Users, GraduationCap, Code, Cpu, Database, Network, Terminal, Server, Wifi } from 'lucide-react';
 import bgImage from '../assets/bg.png';
 import './Hero.css';
 
 const Hero = () => {
     const [showLogin, setShowLogin] = useState(false);
     const [isTransitioning, setIsTransitioning] = useState(false);
-    const [brightness, setBrightness] = useState(100);
-
     const navigate = useNavigate();
 
     const handleAdminLogin = () => {
@@ -20,14 +18,8 @@ const Hero = () => {
 
     return (
         <div className="hero-container">
-            {/* Brightness Darkening/Brightening Overlay */}
-            <div
-                className="brightness-overlay"
-                style={{
-                    backdropFilter: `brightness(${brightness}%)`,
-                    WebkitBackdropFilter: `brightness(${brightness}%)`
-                }}
-            ></div>
+            {/* Brightness Darkening/Brightening Overlay Fixed at Max */}
+            <div className="brightness-overlay-fixed"></div>
 
             {/* Page Transition Overlay */}
             <div className={`page-transition-overlay ${isTransitioning ? 'active' : ''}`}>
@@ -78,18 +70,7 @@ const Hero = () => {
 
             <img src={bgImage} alt="Background" className="bg-image" />
 
-            {/* Brightness Control Slider */}
-            <div className="brightness-control glass">
-                <Sun className="brightness-icon" size={20} />
-                <input
-                    type="range"
-                    min="30"
-                    max="250"
-                    value={brightness}
-                    onChange={(e) => setBrightness(e.target.value)}
-                    className="brightness-slider"
-                />
-            </div>
+
 
             {/* Top Right Content */}
             <div className="hero-main-section glass animate-fade-in relative z-10">
