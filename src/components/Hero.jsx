@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Shield, Users, GraduationCap, Code, Cpu, Database, Network, Terminal, Server, Wifi } from 'lucide-react';
+import { Shield, Users, GraduationCap, Code, Cpu, Database, Network, Terminal, Server, Wifi, Sun } from 'lucide-react';
 import bgImage from '../assets/bg.png';
 import './Hero.css';
 
 const Hero = () => {
     const [showLogin, setShowLogin] = useState(false);
     const [isTransitioning, setIsTransitioning] = useState(false);
+    const [brightness, setBrightness] = useState(100);
 
     const navigate = useNavigate();
 
@@ -19,6 +20,9 @@ const Hero = () => {
 
     return (
         <div className="hero-container">
+            {/* Brightness Darkening Overlay */}
+            <div className="brightness-overlay" style={{ opacity: 1 - brightness / 100 }}></div>
+
             {/* Page Transition Overlay */}
             <div className={`page-transition-overlay ${isTransitioning ? 'active' : ''}`}>
                 <div className="cyber-doors top-door"></div>
@@ -67,6 +71,19 @@ const Hero = () => {
             </div>
 
             <img src={bgImage} alt="Background" className="bg-image" />
+
+            {/* Brightness Control Slider */}
+            <div className="brightness-control glass">
+                <Sun className="brightness-icon" size={20} />
+                <input
+                    type="range"
+                    min="20"
+                    max="100"
+                    value={brightness}
+                    onChange={(e) => setBrightness(e.target.value)}
+                    className="brightness-slider"
+                />
+            </div>
 
             {/* Top Right Content */}
             <div className="hero-main-section glass animate-fade-in relative z-10">
@@ -134,4 +151,4 @@ const Hero = () => {
     );
 };
 
-export default Hero;
+export default Hero;;
