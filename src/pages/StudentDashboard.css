@@ -1,0 +1,378 @@
+.student-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+.student-sidebar {
+    width: 250px;
+    background: rgba(10, 15, 30, 0.9);
+    border-right: 1px solid rgba(0, 255, 204, 0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.student-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.welcome-banner {
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(0, 255, 204, 0.05) 0%, rgba(0, 200, 255, 0.05) 100%);
+    border-left: 4px solid var(--accent-primary);
+}
+
+.welcome-banner h2 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.welcome-banner p {
+    color: var(--text-muted);
+}
+
+.mt-4 {
+    margin-top: 20px;
+}
+
+.result-card {
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+}
+
+.result-card h4 {
+    color: var(--accent-primary);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(0, 255, 204, 0.2);
+    padding-bottom: 10px;
+}
+
+.subjects-table-container {
+    overflow-x: auto;
+}
+
+.subjects-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.subjects-table th, .subjects-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.subjects-table th {
+    color: var(--accent-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.subjects-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.grade-badge, .status-badge {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.status-badge {
+    background: rgba(0, 255, 204, 0.1);
+    color: #00ffcc;
+    border: 1px solid rgba(0, 255, 204, 0.3);
+}
+
+.status-f {
+    background: rgba(255, 50, 50, 0.1);
+    color: #ff5555;
+    border: 1px solid rgba(255, 50, 50, 0.3);
+}
+
+.grade-badge { background: rgba(255,255,255,0.05); color: #fff; border: 1px solid rgba(255,255,255,0.1); }
+.grade-o { background: rgba(0, 255, 204, 0.15); color: #00ffcc; border-color: #00ffcc; }
+.grade-aplus { background: rgba(0, 200, 255, 0.15); color: #00c8ff; border-color: #00c8ff; }
+.grade-a { background: rgba(50, 150, 255, 0.15); color: #3296ff; border-color: #3296ff; }
+.grade-bplus { background: rgba(150, 100, 255, 0.15); color: #9664ff; border-color: #9664ff; }
+.grade-b { background: rgba(200, 100, 200, 0.15); color: #c864c8; border-color: #c864c8; }
+.grade-c { background: rgba(255, 200, 100, 0.15); color: #ffc864; border-color: #ffc864; }
+.grade-u { background: rgba(255, 50, 50, 0.15); color: #ff5555; border-color: #ff5555; }
+
+/* Profile View Styles */
+.profile-view {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+}
+
+.profile-header-large {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(0, 255, 204, 0.2);
+}
+
+.large-avatar {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+}
+
+.profile-titles h2 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.role-badge {
+    background: rgba(0, 255, 204, 0.1);
+    color: var(--accent-primary);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(0, 255, 204, 0.3);
+}
+
+.profile-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.detail-group label {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.detail-group p {
+    color: #fff;
+    font-size: 1.1rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.credit-input {
+    width: 60px;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 255, 204, 0.3);
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    outline: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.credit-input:focus {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 5px rgba(0, 255, 204, 0.5);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Chrome, Safari, Edge, Opera */
+.credit-input::-webkit-outer-spin-button,
+.credit-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.credit-input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.cgpa-calculator-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 255, 204, 0.1);
+    border: 1px solid rgba(0, 255, 204, 0.3);
+    background: linear-gradient(135deg, rgba(0, 255, 204, 0.15) 0%, rgba(10, 15, 30, 0.95) 100%);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.cgpa-calculator-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 255, 204, 0.4);
+    border-color: rgba(0, 255, 204, 0.8);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.cgpa-modal {
+    position: relative;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    background: rgba(15, 20, 35, 0.95);
+    border: 1px solid rgba(0, 255, 204, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 255, 204, 0.15);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: var(--accent-primary);
+}
+
+.cgpa-modal h3 {
+    color: var(--accent-secondary);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cgpa-score-large {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
+    font-family: monospace;
+    margin-bottom: 20px;
+}
+
+.appreciation-msg {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.5;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    border-left: 3px solid var(--accent-primary);
+}
+
+.semesters-list {
+    margin-bottom: 20px;
+    max-height: 180px;
+    overflow-y: auto;
+    padding-right: 5px;
+    text-align: left;
+}
+
+/* Custom scrollbar for semesters list */
+.semesters-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.semesters-list::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.semesters-list::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 204, 0.3);
+    border-radius: 10px;
+}
+
+.semester-sgpa-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.semester-label {
+    color: var(--text-light);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.semester-score {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: rgba(0, 255, 204, 0.2);
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 255, 204, 0.3);
+}
+
+.overall-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 204, 0.3), transparent);
+    margin: 20px 0;
+}
+
+.cgpa-modal h4 {
+    color: var(--accent-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
